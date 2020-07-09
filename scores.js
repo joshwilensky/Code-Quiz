@@ -1,7 +1,7 @@
-var restartBtn = document.querySelector("button.restartBtn"),
+var goBackBtn = document.querySelector("button.goBackBtn"),
     var clearBtn = document.querySelector("button.clearBtn"),
         // get the highScores list and turn it back into an object
-        var highScores = JSON.parse(localStorage.getItem("highScores") || "[]"),
+        var highScores = JSON.parse(localStorage.getItem("HighScores") || "[]"),
             var scoreList = document.getElementById("score-list");
 
 // sort scores from high to low
@@ -16,12 +16,11 @@ for (var s = 0; s < highScores.length; s++) {
     scoreList.appendChild(newLi)
 }
 
-
 // click handlers for restart and clearing scoreboard
 clearBtn.addEventListener("click", function () {
     localStorage.clear();
     history.back()
 });
-restartBtn.addEventListener("click", function () {
+goBackBtn.addEventListener("click", function () {
     history.back();
 });

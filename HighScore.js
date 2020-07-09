@@ -1,4 +1,4 @@
-var highScore = document.querySelector("#highScore");
+var highScore = document.querySelector("#HighScores");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 var finalScore = document.querySelector("#finalScore")
@@ -11,6 +11,7 @@ clear.addEventListener("click", function () {
 // Retrieves local storage 
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(localStorage.getItem("allScores"));
+console.log("all scores: ", allScores)
 
 if (allScores !== null) {
     console.log("I am Here")
